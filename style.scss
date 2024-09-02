@@ -1,0 +1,265 @@
+/* Globale Variablen */
+$color-white: white;
+$color-black-transparent-50: rgba(0, 0, 0, 0.5);
+$color-black-transparent-80: rgba(0, 0, 0, 0.8);
+$color-highlight: rgba(255, 227, 66, 1);
+$font-acme: "Acme", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+$text-opacity: 0.8;
+$letter-spacing: 2px;
+$main-padding: 50px;
+$button-padding: 15px 60px;
+$margin-bottom: 40px;
+$gap: 20px;
+$background-color: rgba(35, 36, 52, 1);
+.description {
+  color: $color-white;
+  font-family: $font-open-sans;
+  opacity: $text-opacity;
+  line-height: 25px;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 18px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.second-text-wrapper__headline,
+.bubble-teas-container__headline {
+  font-family: $font-acme;
+  color: $color-highlight;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: $letter-spacing;
+}
+/* Erste Container: first-container */
+.first-container {
+  background-image: linear-gradient(
+      to bottom,
+      $color-black-transparent-50,
+      $color-black-transparent-80
+    ),
+    url("./images/first-image.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: $margin-bottom;
+
+  nav {
+    .nav-wrapper {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 10px 40px;
+    }
+
+    .nav-image {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $main-padding;
+    height: 100vh;
+
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__headline {
+      font-family: $font-acme;
+      color: $color-white;
+      font-size: 30px;
+      text-align: center;
+      letter-spacing: $letter-spacing;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Zweites Bild: second-image */
+.second-image {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(35, 36, 52, 1)
+    ),
+    url("./images/bubbles.png");
+  height: 70vh;
+  margin: 0 20px $margin-bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .second-text-wrapper {
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $gap;
+  }
+
+  .button {
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    padding: $button-padding;
+    border-radius: 30px;
+    margin: 40px 0 $margin-bottom;
+    font-size: 15px;
+    font-family: $font-acme;
+  }
+}
+
+.bubble-teas-container {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+
+  .border {
+    border: 3px dotted $color-white;
+    width: 250px;
+    border-radius: 15px;
+    padding: 50px 20px;
+  }
+
+  img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .bubble-tea-headline {
+    color: $color-highlight;
+    font-family: $font-acme;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .bubble-tea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: $gap;
+
+    .img1 {
+      width: 170px;
+      height: 220px;
+      position: relative;
+      left: -10px;
+    }
+
+    .img2 {
+      width: 140px;
+    }
+    .img3 {
+      width: 170px;
+      height: 230px;
+    }
+    .img4 {
+      width: 130px;
+      height: 180px;
+    }
+    .img5 {
+      width: 140px;
+      height: 180px;
+    }
+  }
+}
+
+nav {
+  position: relative;
+  color: $color-white;
+  padding: 40px;
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+
+    .bar {
+      background-color: $color-white;
+      height: 6px;
+      width: 60px;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 20px;
+      opacity: 0.8;
+    }
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: $color-white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+.bubbles-container {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .bubbles-headline {
+    color: $color-highlight;
+    font-family: $font-acme;
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .bubbles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bubbles-border {
+    border: 3px dotted $color-white;
+    width: 250px;
+    border-radius: 15px;
+    padding: 60px 20px;
+  }
+}

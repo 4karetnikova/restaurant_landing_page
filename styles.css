@@ -1,0 +1,236 @@
+/* Globale Variablen */
+:root {
+  --color-white: white;
+  --color-black-transparent-50: rgba(0, 0, 0, 0.5);
+  --color-black-transparent-80: rgba(0, 0, 0, 0.8);
+  --color-highlight: rgba(255, 227, 66, 1);
+  --font-acme: "Acme", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --text-opacity: 0.8;
+  --letter-spacing: 2px;
+  --main-padding: 50px;
+  --button-padding: 20px 40px;
+  --margin-bottom: 40px;
+}
+
+/* Body */
+/* body {
+  padding: 0;
+  margin: 0;
+} */
+
+/* Erste Container: first-container */
+.first-container {
+  background-image: linear-gradient(
+      to bottom,
+      var(--color-black-transparent-50),
+      var(--color-black-transparent-80)
+    ),
+    url("./images/first-image.png");
+  background-color: antiquewhite;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: var(--margin-bottom);
+}
+
+/* Navigation */
+.first-container nav .nav-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px 40px;
+}
+
+.first-container .nav-image {
+  display: flex;
+  align-items: center;
+}
+
+.first-container .nav-image img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Main View */
+.first-container .main-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--main-padding);
+  height: 100vh;
+}
+
+.first-container .main-view__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.first-container .main-view__headline {
+  font-family: var(--font-acme);
+  color: var(--color-white);
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: var(--letter-spacing);
+}
+
+.first-container .description {
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+  opacity: var(--text-opacity);
+  line-height: 25px;
+  text-align: center;
+}
+
+/* Zweites Bild: second-image */
+.second-image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(35, 36, 52, 1)
+    ),
+    url("./images/bubbles.png");
+
+  height: 70vh;
+  margin: 0 20px var(--margin-bottom);
+}
+
+.second-image .second-text-wrapper {
+  padding: 70px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headline {
+  font-family: var(--font-acme);
+  color: var(--color-highlight);
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: var(--letter-spacing);
+}
+
+.second-image .description {
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+  opacity: var(--text-opacity);
+  line-height: 25px;
+  text-align: center;
+}
+
+.second-image .button {
+  background-color: rgba(35, 36, 52, 1);
+  color: var(--color-white);
+  padding: var(--button-padding);
+  border-radius: 30px;
+  margin: 40px 0 var(--margin-bottom);
+  font-size: 15px;
+  font-family: var(--font-acme);
+}
+
+.bubble-teas-container {
+  background-color: rgba(35, 36, 52, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.bubble-teas-container .border {
+  border: 3px dotted white;
+  width: 250px;
+  border-radius: 15px;
+  padding: 50px 20px;
+}
+
+.bubble-teas-container img {
+  width: 150px;
+  height: 200px;
+}
+
+.bubble-teas-container .bubble-tea-headline {
+  color: var(--color-highlight);
+  font-family: var(--font-acme);
+  font-size: 20px;
+}
+.bubble-teas-container .bubble-tea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+nav {
+  position: relative;
+  color: #fff;
+  padding: 40px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-toggle .bar {
+  background-color: #fff;
+  height: 6px;
+  width: 60px;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links.active {
+  display: flex;
+}
+
+.bubble-tea .img2 {
+  width: 140px;
+}
+
+.bubble-tea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bubble-tea .img1 {
+  width: 170px;
+  height: 220px;
+  position: relative;
+  left: -10px;
+}
