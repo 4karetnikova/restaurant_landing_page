@@ -353,6 +353,7 @@ nav {
 }
 
 footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -391,19 +392,7 @@ footer {
     gap: 5px;
     font-family: $font-open-sans;
   }
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .footer-links li {
-    list-style-type: none;
-  }
-  .footer-links a {
-    text-decoration: none;
-    color: black;
-    font-family: $font-open-sans;
-  }
+
   .footer-links {
     display: flex;
     flex-direction: column;
@@ -414,14 +403,23 @@ footer {
     ul {
       padding-left: 0;
     }
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: $font-open-sans;
+    }
   }
+
   .footer-logo {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    transform: translateX(-50%);
-    top: -150px;
+    position: absolute;
+    top: -2%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 120px;
     height: 120px;
 
