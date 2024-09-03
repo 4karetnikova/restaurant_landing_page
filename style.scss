@@ -1,5 +1,6 @@
 /* Globale Variablen */
 $color-white: white;
+$color-black: black;
 $color-black-transparent-50: rgba(0, 0, 0, 0.5);
 $color-black-transparent-80: rgba(0, 0, 0, 0.8);
 $color-highlight: rgba(255, 227, 66, 1);
@@ -24,14 +25,20 @@ $background-color: rgba(35, 36, 52, 1);
 body {
   padding: 0;
   margin: 0;
+  background-color: $background-color;
 }
 .second-text-wrapper__headline,
-.bubble-teas-container__headline {
+.bubble-teas-container__headline,
+.phone-number-container-headline,
+.why-us-headline {
   font-family: $font-acme;
   color: $color-highlight;
   font-size: 25px;
   text-align: center;
   letter-spacing: $letter-spacing;
+}
+.phone-number-container-headline {
+  transform: rotate(-5deg);
 }
 /* Erste Container: first-container */
 .first-container {
@@ -86,18 +93,14 @@ body {
       text-align: center;
       letter-spacing: $letter-spacing;
       opacity: 0.9;
+      transform: rotate(-5deg);
     }
   }
 }
 
 /* Zweites Bild: second-image */
 .second-image {
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(35, 36, 52, 1)
-    ),
-    url("./images/bubbles.png");
+  background-image: url("./images/bubbles.png");
   height: 70vh;
   margin: 0 20px $margin-bottom;
   display: flex;
@@ -114,16 +117,16 @@ body {
   }
 
   .button {
-    background-color: $background-color;
+    background-color: $color-highlight;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-white;
     padding: $button-padding;
     border-radius: 30px;
     margin: 40px 0 $margin-bottom;
     font-size: 15px;
     font-family: $font-acme;
+    border: none;
   }
 }
 
@@ -255,12 +258,176 @@ nav {
   .bubbles {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: $gap;
   }
   .bubbles-border {
     border: 3px dotted $color-white;
     width: 250px;
     border-radius: 15px;
     padding: 60px 20px;
+  }
+}
+.phone-number-container {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .phone-number {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.review-container {
+  background-image: url("images/bubble-tea-picture.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  height: 700px;
+  background-repeat: no-repeat;
+
+  .yellow-container {
+    background-color: $color-highlight;
+    padding: 40px;
+    margin: 40px;
+    height: 350px;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .yellow-container-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+
+      .stars {
+        color: $color-black;
+        font-size: 25px;
+      }
+
+      .yellow-container-text {
+        color: black;
+        font-family: $font-open-sans;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .yellow-container-text-two {
+        color: $color-black;
+        font-family: $font-open-sans;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.why-us-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  height: 60vh;
+
+  .why-us-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+  span {
+    color: $color-highlight;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  padding: 40px;
+
+  .footer-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+
+    .footer-headline {
+      font-family: $font-acme;
+      font-size: 25px;
+      text-align: center;
+      letter-spacing: $letter-spacing;
+    }
+
+    .footer-adress {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: $font-open-sans;
+    }
+  }
+
+  hr {
+    width: 80%;
+  }
+
+  .footer-phone-number {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: $font-open-sans;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-links li {
+    list-style-type: none;
+  }
+  .footer-links a {
+    text-decoration: none;
+    color: black;
+    font-family: $font-open-sans;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
+    ul {
+      padding-left: 0;
+    }
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translateX(-50%);
+    top: -150px;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
