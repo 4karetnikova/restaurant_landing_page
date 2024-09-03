@@ -202,9 +202,11 @@ nav {
     justify-content: space-between;
   }
 
-  .menu-toggle {
+  .menu-toggle-open {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    z-index: 11;
 
     .bar {
       background-color: $color-white;
@@ -217,14 +219,28 @@ nav {
     }
   }
 
+  .menu-toggle-close {
+    display: none;
+    cursor: pointer;
+    z-index: 11;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: $color-white;
     position: absolute;
     top: 60px;
     left: 0;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    background-color: #040516;
+    z-index: 10;
 
     li {
       margin: 10px 0;

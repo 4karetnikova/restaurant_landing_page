@@ -13,6 +13,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>SK's Diners</title>
   </head>
   <body>
@@ -20,15 +24,18 @@
       <nav>
         <div class="nav-header">
           <div class="nav-image">
-            <img src="/images/logo.png" alt="logo" />
+            <a href="#">
+              <img src="/images/logo.png" alt="Logo" />
+            </a>
           </div>
-          <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <div class="menu-toggle-open" id="openMenuIcons">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+          <div class="menu-toggle-close" id="closeMenuIcons">
+            <span class="material-symbols-outlined"> close </span>
           </div>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="#">google</a></li>
           <li><a href="#">Pick-up Order</a></li>
           <li><a href="#">About SK</a></li>
@@ -184,5 +191,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./script.js" defer></script>
   </body>
 </html>
